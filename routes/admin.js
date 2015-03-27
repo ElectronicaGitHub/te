@@ -8,10 +8,11 @@ function admin(express) {
 	router.get('/', function(req, res, next) {
 		Themes.find(function(err, json) {
 			if (err) return next(err);
-			Subthemes.find(function(err, json) {
+			Subthemes.find(function(err, json2) {
 					if (err) return next(err);
 				res.render('admin', {
-					themes : json
+					themes : json,
+					subthemes : json2
 				});
 			})
 		})
@@ -19,7 +20,8 @@ function admin(express) {
 
 	router.post('/save/theme', function(req, res, next) {
 		var t = new Themes({
-			name : req.body.name
+			name : req.body.name,
+			userlabel : req.body.userlabel
 		})
 		t.save(function(err, results) {
 			if (err) return next(err);
@@ -32,6 +34,7 @@ function admin(express) {
 	router.post('/save/subtheme', function(req, res, next) {
 		var st = new Subthemes({
 			name : req.body.name,
+			userlabel : req.body.userlabel,
 			theme : req.body.theme
 		})
 		st.save(function(err, results) {

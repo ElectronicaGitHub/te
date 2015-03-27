@@ -5,6 +5,9 @@ var Themes = new Schema({
 	name : {
 		type: String
 	},
+	userlabel : {
+		type : String
+	},
 	subthemes : {
 		type : [String]
 	}

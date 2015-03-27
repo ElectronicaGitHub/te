@@ -11,7 +11,10 @@
 	 <hr>
 
 	<div ng-repeat="theme in themes">
+		Название
 		<input type="text" ng-model="theme.name">
+		Видимое в URL название( Лат. )
+		<input type="text" ng-model="theme.userlabel">
 	</div>
 
 	<hr>
@@ -19,7 +22,10 @@
 	<hr>
 
 	Добавляем тему
+	Название
 	<input type="text" ng-model="newtheme.name">
+	Видимое в URL название( Лат. )
+	<input type="text" ng-model="newtheme.userlabel">
 	<button ng-click="add('theme', newtheme)">Add theme</button>
 
 	<hr>
@@ -31,7 +37,10 @@
 
 	Выберите тему
 	<select ng-model="newsubtheme.theme" ng-options="t.name as t.name for t in themes"></select>
+	Название
 	<input type="text" ng-model="newsubtheme.name">
+	Видимое в URL название( Лат. )
+	<input type="text" ng-model="newsubtheme.userlabel">
 	<button ng-click="add('subtheme', newsubtheme)">Add subtheme</button>
 
 
