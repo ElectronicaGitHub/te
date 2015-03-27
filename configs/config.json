@@ -1,10 +1,10 @@
 {
 	"port" : 8080,
 	"db": {
-		"name" : "TvoyaDoska"
+		"name" : "toureco"
 	},
 	"mongoose" :  {
-		"uri" : "mongodb://localhost/TvoyaDoska",
+		"uri" : "mongodb://localhost/toureco",
 		"options" : {
 			"server" : {
 				"socketOptions" : {
@@ -14,7 +14,7 @@
 		}
 	},
 	"session" : {
-		"secret" : "TvoyaDoskaEtoZaebisParen",
+		"secret" : "tourecotourecotourecotoureco",
 		"key" : "sid",
 		"cookie" : {
 			"path" : "/",

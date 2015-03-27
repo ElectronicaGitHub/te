@@ -7,8 +7,41 @@
 <link rel="stylesheet" href="/stylesheets/index.css">
 
 <div ng-app="admin" ng-controller="Admin">
+	 <h4>Добро пожаловать в админку</h4>
+	 <hr>
+
+	<div ng-repeat="theme in themes">
+		<input type="text" ng-model="theme.name">
+	</div>
+
+	<hr>
+	Add
+	<hr>
+
+	Добавляем тему
+	<input type="text" ng-model="newtheme.name">
+	<button ng-click="add('theme', newtheme)">Add theme</button>
+
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+
+	Добавляем подтему
+
+	Выберите тему
+	<select ng-model="newsubtheme.theme" ng-options="t.name as t.name for t in themes"></select>
+	<input type="text" ng-model="newsubtheme.name">
+	<button ng-click="add('subtheme', newsubtheme)">Add subtheme</button>
+
 
 </div>
 
 <style>
 </style>
+
+<script>
+	window.themes = <%- JSON.stringify(themes) %>;
+	window.subthemes = <%- JSON.stringify(subthemes) %>;
+
+</script>
