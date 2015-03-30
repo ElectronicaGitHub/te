@@ -22,7 +22,7 @@ function fn(express) {
 
 	router.get('/:theme/:tour', function(req, res, next) {
 		Tour.findOne({
-			userlabel : req.params.userlabel,
+			userlabel : req.params.tour,
 			theme : req.params.theme
 		}, function(err, result) {
 			if (err) return next(err);

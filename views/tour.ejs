@@ -1,13 +1,14 @@
 <%- layout('base.ejs') %>
 <% block('title', 'Главная страница') -%>
-<script src="/javascripts/utils.js"></script>
-<script src="/javascripts/index_page.js"></script>
-<script src="/javascripts/directives/news_element.js"></script>
+<script src="/javascripts/tour.js"></script>
 <link rel="stylesheet" href="/stylesheets/index.css">
-<div ng-app="index" ng-controller="Index" ng-init="init()">	
+<div ng-app="index" ng-controller="Tour" ng-init="init()">	
 
 	<h4><%= tour.title %></h4>
-	<div>
-		<%= tour.content %>
+	<div ng-bind-html="tour.content">
 	</div>
 </div>
+
+<script>
+	window.tour = <%- JSON.stringify(tour) %>;
+</script>
