@@ -1,9 +1,12 @@
 var mongoose = require('../configs/mongoose.js');
 Schema = mongoose.Schema;
 
-var Subthemes = new Schema({
-	name : {
+var Tour = new Schema({
+	title : {
 		type: String
+	},
+	content : {
+		type : String
 	},
 	userlabel : {
 		type : String
@@ -13,4 +16,4 @@ var Subthemes = new Schema({
 	}
 })
 
-module.exports = mongoose.model('Subthemes', Subthemes);
+module.exports = mongoose.model('Tour', Tour);

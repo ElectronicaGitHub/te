@@ -1,6 +1,5 @@
-var News = require('../models/News');
+var Tour = require('../models/Tour');
 var Themes = require('../models/Themes');
-var Subthemes = require('../models/Subthemes');
 
 function fn(express) {
 	var router = express.Router();
@@ -10,7 +9,6 @@ function fn(express) {
 	});
 
 	router.get('/:theme', function(req, res, next) {
-		console.log(req.params.theme);
 		Themes.findOne({
 			userlabel : req.params.theme
 		}, function(err, result) {
@@ -18,6 +16,18 @@ function fn(express) {
 			if (err) return next(err);
 			res.render('theme', {
 				theme : result
+			})
+		})
+	})
+
+	router.get('/:theme/:tour', function(req, res, next) {
+		Tour.findOne({
+			userlabel : req.params.userlabel,
+			theme : req.params.theme
+		}, function(err, result) {
+			if (err) return next(err);
+			res.render('tour',  {
+				tour : result
 			})
 		})
 	})
