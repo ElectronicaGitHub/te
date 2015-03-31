@@ -13,6 +13,9 @@ var Tour = new Schema({
 	},
 	theme : {
 		type : String
+	},
+	image : {
+		type : String
 	}
 })
 

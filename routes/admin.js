@@ -1,4 +1,3 @@
-var News = require('../models/News');
 var Themes = require('../models/Themes');
 var Tour = require('../models/Tour');
 
@@ -19,10 +18,7 @@ function admin(express) {
 	});
 
 	router.post('/save/theme', function(req, res, next) {
-		var t = new Themes({
-			name : req.body.name,
-			userlabel : req.body.userlabel
-		})
+		var t = new Themes(req.body);
 		t.save(function(err, results) {
 			if (err) return next(err);
 			res.json({

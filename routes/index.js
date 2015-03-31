@@ -4,18 +4,28 @@ var Themes = require('../models/Themes');
 function fn(express) {
 	var router = express.Router();
 	
-	router.get('/', function(req, res) {
-		res.render('index');
+	router.get('/', function(req, res, next) {
+		Themes.find(function(err, themes) {
+			res.render('index', {
+				themes: themes
+			});
+			
+		})
 	});
 
 	router.get('/:theme', function(req, res, next) {
 		Themes.findOne({
 			userlabel : req.params.theme
 		}, function(err, result) {
-			console.log(result);
-			if (err) return next(err);
-			res.render('theme', {
-				theme : result
+			Tour.find({
+				theme : result.userlabel
+			}, function(err, result2) {
+				console.log(result);
+				if (err) return next(err);
+				res.render('theme', {
+					theme : result,
+					tours : result2
+				})
 			})
 		})
 	})

@@ -2,7 +2,24 @@
 <% block('title', 'Главная страница') -%>
 <script src="/javascripts/utils.js"></script>
 <script src="/javascripts/index_page.js"></script>
-<script src="/javascripts/directives/news_element.js"></script>
 <link rel="stylesheet" href="/stylesheets/index.css">
 <div ng-app="index" ng-controller="Index" ng-init="init()">	
+	
+	<div ng-repeat="t in themes" class="each-theme" >
+		<a href="/{{ t.userlabel }}">
+			<div class="bg" style="background-image: url({{ t.image }})">
+				<div class="fader">
+					<span>
+						<p>{{ t.name }}</p>
+					</span>
+				</div>
+			</div>
+		</a>
+	</div>
+
 </div>
+
+<script>
+	window.themes = <%- JSON.stringify(themes) %>;
+</script>
+
