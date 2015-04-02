@@ -3,26 +3,10 @@
 <script src="/javascripts/utils.js"></script>
 <script src="/javascripts/index_page.js"></script>
 <link rel="stylesheet" href="/stylesheets/index.css">
-<div ng-app="index" ng-controller="Index" ng-init="init()">	
-
-	<h4><%= theme.name %></h4>
-
-	<div ng-repeat="t in themes" class="each-theme" >
-		<a href="/<%= theme.userlabel %>/{{ t.userlabel }}">
-			<div class="bg" style="background-image: url({{ t.image }})">
-				<div class="fader">
-					<span>
-						<p>{{ t.title }}</p>
-					</span>
-				</div>
-			</div>
-		</a>
-	</div>
-
-</div>
+<div class="themes-list-items"></div>
 
 <script>
-	window.themes = <%- JSON.stringify(tours) %>;
+	window.data_ = <%- JSON.stringify(tours) %>;
 	window.theme = <%- JSON.stringify(theme) %>;
 </script>
 

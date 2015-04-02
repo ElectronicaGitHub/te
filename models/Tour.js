@@ -2,7 +2,7 @@ var mongoose = require('../configs/mongoose.js');
 Schema = mongoose.Schema;
 
 var Tour = new Schema({
-	title : {
+	name : {
 		type: String
 	},
 	content : {
