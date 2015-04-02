@@ -18,6 +18,7 @@
 				<span>{{ theme.userlabel }}</span>
 			</div>
 		</a>
+		<button ng-click="loadDataToUpdate(theme, 'theme')">Загрузить данные темы</button>
 		Туры
 		<div class="tours">
 			<div ng-repeat="tour in theme.tours">
@@ -28,6 +29,7 @@
 						<span>{{ tour.userlabel }}</span>
 					</p>
 				</a>
+				<button ng-click="loadDataToUpdate(tour, 'tour')">Загрузить данные тура</button>
 			</div>
 		</div>
 		<hr>
@@ -42,6 +44,7 @@
 	Видимое в URL название( Лат. )
 	<input type="text" ng-model="newtheme.userlabel">
 	<button ng-click="add('theme', newtheme)">Add theme</button>
+	<button ng-show="updateButtonTheme" ng-click="update('theme', newtheme)">Сохранить изменения в схеме</button>
 
 	<hr>
 	<hr>
@@ -62,6 +65,7 @@
 	<hr>
 	<textarea ui-tinymce ng-model="newtour.content"></textarea>
 	<button ng-click="add('tour', newtour)">Add Tour</button>
+	<button ng-show="updateButtonTour" ng-click="update('tour', newtour)">Сохранить изменения в туре</button>
 
 	<hr>
 	<hr>
