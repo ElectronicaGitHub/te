@@ -3,7 +3,7 @@ $(function() {
 	var data = window.data_;
 	var container = {
 		element : $('*[class*=-list-items]'),
-		height : $(window).height() - $('header').height(),
+		height : $(window).height() - $('header').height() - $('footer').height(),
 		width: $(window).width()
 	}
 
