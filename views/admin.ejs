@@ -12,26 +12,26 @@
 	 <h4>Добро пожаловать в админку</h4>
 	 <hr>
 
-	<div ng-repeat="theme in themes">
-		<a href="/{{ theme.userlabel }}">
-			<div type="text">
+	<div ng-repeat="theme in themes" class="admin-each-theme">
+		<a class="admin-label" href="/{{ theme.userlabel }}">
+			<span type="text">
 				<span>{{ theme.name }}</span>
 				<span> \\\ </span>
 				<span>{{ theme.userlabel }}</span>
-			</div>
+			</span>
 		</a>
-		<button ng-click="loadDataToUpdate(theme, 'theme')">Загрузить данные темы</button>
+		<span ng-click="loadDataToUpdate(theme, 'theme')">Загрузить данные темы</span>
 		Туры
 		<div class="tours">
 			<div ng-repeat="tour in theme.tours">
-				<a href="/{{ theme.userlabel }}/{{ tour.userlabel }}">
-					<p>
+				<a class="admin-label" href="/{{ theme.userlabel }}/{{ tour.userlabel }}">
+					<span>
 						<span>{{ tour.name }}</span>
 						<span> \\\ </span>
 						<span>{{ tour.userlabel }}</span>
-					</p>
+					</span>
 				</a>
-				<button ng-click="loadDataToUpdate(tour, 'tour')">Загрузить данные тура</button>
+				<span ng-click="loadDataToUpdate(tour, 'tour')">Загрузить данные тура</span>
 			</div>
 		</div>
 		<hr>
@@ -93,6 +93,19 @@
 	}
 	.subthemes > div:hover {
 		background-color: rgba(0,0,0,.3);
+	}
+	.admin-each-theme {
+		margin-bottom: 10px;
+	}
+	span[ng-click] {
+		text-decoration: underline;
+	}
+	span[ng-click]:hover {
+		color: blue;
+	}
+	.admin-label {
+		margin-bottom: 10px;
+		display: inline-block;
 	}
 </style>
 
