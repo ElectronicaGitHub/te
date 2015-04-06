@@ -31,13 +31,18 @@ function fn(express) {
 	})
 
 	router.get('/:theme/:tour', function(req, res, next) {
-		Tour.findOne({
-			userlabel : req.params.tour,
-			theme : req.params.theme
-		}, function(err, result) {
-			if (err) return next(err);
-			res.render('tour',  {
-				tour : result
+		Themes.findOne({
+			userlabel : req.params.theme
+		}, function(err, result1) {
+			Tour.findOne({
+				userlabel : req.params.tour,
+				theme : req.params.theme
+			}, function(err, result2) {
+				if (err) return next(err);
+				res.render('tour',  {
+					tour : result2,
+					theme : result1
+				})
 			})
 		})
 	})

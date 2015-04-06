@@ -1,5 +1,7 @@
 header {
 	height: 140px;
+	width: 80%;
+	margin: 0 auto;
 	line-height: 140px;
 	position: relative;
 }
@@ -27,5 +29,9 @@ header {
 	vertical-align: middle;
 	padding: 0px 10px;
 	text-align: right;
-	
+	font-family: 'Roboto Condensed';	
+}
+.info span p {
+	margin: 0;
+	padding: 0;
 }

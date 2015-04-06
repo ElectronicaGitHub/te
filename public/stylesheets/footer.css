@@ -25,16 +25,15 @@
 		font-weight: 300;
 	}
 	footer span .top {
-		height: 16px;
-		line-height: 16px;
-		margin-bottom: 6px;
+		height: 12px;
+		line-height: 12px;
+		margin-bottom: 4px;
 		font-size: 12px;
 	}
 	footer span .bottom {
 		font-size: 12px;
-		height: 12px;
-		line-height: 12px;
-		font-size: 12px;
+		height: 10px;
+		line-height: 10px;
 	}
 	footer span p {
 		font-family: 'Roboto Condensed';

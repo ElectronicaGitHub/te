@@ -1,9 +1,7 @@
 <%- layout('base.ejs')%>
 <script src="/libs/tinymce/tinymce.min.js"></script>
 <script src="/libs/angular-ui-tinymce/src/tinymce.js"></script>
-<script src="/javascripts/utils.js"></script>
 <script src="/javascripts/admin.js"></script>
-<script src="/javascripts/directives/news_element.js"></script>
 <link rel="stylesheet" href="/stylesheets/index.css">
 <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.css"></link>
 
@@ -65,7 +63,7 @@
 	<select ng-model="newtour.theme" ng-options="t.userlabel as t.name for t in themes"></select>
 	<hr>
 	<hr>
-	<textarea ui-tinymce ng-model="newtour.content"></textarea>
+	<textarea ui-tinymce="tinymce_opts" ng-model="newtour.content"></textarea>
 	<button ng-click="add('tour', newtour)">Add Tour</button>
 	<button ng-show="updateButtonTour" ng-click="update('tour', newtour)">Сохранить изменения в туре</button>
 

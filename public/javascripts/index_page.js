@@ -37,8 +37,8 @@ $(function() {
 		if (dl == 1) {
 			el_in_col = el_in_row = 1;
 		} else if (dl == 2) {
-			el_in_row = 1;
-			el_in_col = 2;
+			el_in_row = 2;
+			el_in_col = 1;
 		} else if (dl >= 3) {
 			el_in_row = 2;
 			if (dl % 2 == 1) {

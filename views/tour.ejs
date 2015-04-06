@@ -1,14 +1,15 @@
 <%- layout('base.ejs') %>
-<% block('title', 'Главная страница') -%>
+<% block('title', theme.name + ' // ' + tour.name) -%>
 <script src="/javascripts/tour.js"></script>
 <link rel="stylesheet" href="/stylesheets/index.css">
-<div ng-app="index" ng-controller="Tour" ng-init="init()">	
-
-	<h4><%= tour.title %></h4>
-	<div ng-bind-html="tour.content">
+<link rel="stylesheet" href="/stylesheets/tour.css">
+<div ng-app="index" ng-controller="Tour" ng-init="init()" class="tour-container">
+	<div class="tour-bg" style="background-image : url(<%= tour.image %>)"></div>	
+	<div class="tour-content" ng-bind-html="trustAsHtml(tour.content)">
 	</div>
 </div>
 
 <script>
 	window.tour = <%- JSON.stringify(tour) %>;
+	window.theme = <%- JSON.stringify(theme) %>;
 </script>
