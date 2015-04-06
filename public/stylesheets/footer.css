@@ -1,0 +1,43 @@
+	footer {
+		clear: both;
+		/*background-color: #222;*/
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+	}
+	footer a {
+		/*color: white;*/
+		color: #222;
+		text-decoration: none;
+	}
+	footer span {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 30px;
+	}
+	footer span .webterror {
+		font-weight: 700;
+		font-size: 18px;
+		height: 18px;
+		line-height: 18px;
+	}
+	footer span .top, footer span .bottom {
+		font-weight: 300;
+	}
+	footer span .top {
+		height: 16px;
+		line-height: 16px;
+		margin-bottom: 6px;
+		font-size: 12px;
+	}
+	footer span .bottom {
+		font-size: 12px;
+		height: 12px;
+		line-height: 12px;
+		font-size: 12px;
+	}
+	footer span p {
+		font-family: 'Roboto Condensed';
+		padding: 0;
+		margin: 0;
+	}

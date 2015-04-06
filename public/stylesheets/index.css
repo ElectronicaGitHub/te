@@ -3,9 +3,10 @@ html, body {
 	margin: 0;
 }
 *[class*=-list-items] {
-	width: 100%;
+	width: 80%;
 	height: auto;
 	overflow: hidden;
+	margin: 0 auto;
 }
 
 .each-theme {
@@ -17,6 +18,11 @@ html, body {
 	-webkit-transition: opacity 0.8s;
 	-moz-transition: opacity 0.8s;
 	transition: opacity 0.8s;
+}
+.t-wrapper {
+	padding: 5px;
+	width: 100%;
+	height: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -26,8 +32,13 @@ html, body {
 	background-size: cover;
 	height: 100%;
 	background-position: center center;
-	
+	-webkit-transition: background-size 0.4s;
+	-moz-transition: background-size 0.4s;
+	transition: background-size 0.4s;
 }
+/*.each-theme:hover .bg {
+	background-size: 110%;
+}*/
 .fader {
 	text-align: center;
 	background-color: rgba(0,0,0,.5);

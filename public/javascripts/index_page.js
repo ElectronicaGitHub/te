@@ -4,7 +4,7 @@ $(function() {
 	var container = {
 		element : $('*[class*=-list-items]'),
 		height : $(window).height() - $('header').height() - $('footer').height(),
-		width: $(window).width()
+		width: $('*[class*=-list-items]').width()
 	}
 
 	for (var i in data) {
@@ -13,11 +13,13 @@ $(function() {
 			'<a href="' + window.theme.userlabel + '/{{ t.userlabel }}">' : 
 			'<a href="/{{ t.userlabel }}">';
 		var html = url + 
-			'<div class="bg" style="background-image: url({{ t.image }})">' +
-				'<div class="fader">' +
-					'<span>' +
-						'<p>{{ t.name }}</p>' +
-					'</span>' +
+			'<div class="t-wrapper">' +
+				'<div class="bg" style="background-image: url({{ t.image }})">' +
+					'<div class="fader">' +
+						'<span>' +
+							'<p>{{ t.name }}</p>' +
+						'</span>' +
+					'</div>' +
 				'</div>' +
 			'</div>' +
 		'</a>';
