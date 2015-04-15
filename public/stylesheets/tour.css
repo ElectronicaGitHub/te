@@ -18,15 +18,15 @@
 .tour-content {
 	position: relative;
 	z-index: 10;
-	padding: 250px 10% 0px 10%;
+	padding: 75px 10% 0px 10%;
 	font-family: 'Roboto Condensed';
-	margin-top: 50px;
-background: transparent; /* Old browsers */
-background: -moz-linear-gradient(top, transparent 0%, #fff 40%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent), color-stop(40%,#fff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, transparent 0%,#fff 40%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, transparent 0%,#fff 40%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, transparent 0%,#fff 40%); /* IE10+ */
-background: linear-gradient(to bottom, transparent 0%,#fff 40%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='#fff',GradientType=0 ); /* IE6-9 */
+	/*margin-top: 50px;*/
+background: rgba(255,255,255,.5); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,255,255,.5) 0%, rgba(255,255,255,1) 40%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.5)), color-stop(40%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,.5) 0%,rgba(255,255,255,1) 40%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,.5) 0%,rgba(255,255,255,1) 40%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,.5) 0%,rgba(255,255,255,1) 40%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,.5) 0%,rgba(255,255,255,1) 40%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255,255,255,.5)', endColorstr='rgba(255,255,255,1)',GradientType=0 ); /* IE6-9 */
 }
