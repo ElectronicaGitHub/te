@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', require('./routes/admin.js')(express));
+// app.use('/admin', require('./routes/admin.js')(express));
 app.use('/', require('./routes/index.js')(express));
 app.use('/users', users);
 
