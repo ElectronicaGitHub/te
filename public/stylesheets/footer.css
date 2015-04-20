@@ -17,9 +17,10 @@
 	}
 	footer span .webterror {
 		font-weight: 700;
-		font-size: 18px;
-		height: 18px;
-		line-height: 18px;
+		/*letter-spacing: -0.1ex; */
+		font-size: 19px;
+		height: 19px;
+		line-height: 19px;
 	}
 	footer span .top, footer span .bottom {
 		font-weight: 300;
@@ -27,7 +28,7 @@
 	footer span .top {
 		height: 12px;
 		line-height: 12px;
-		margin-bottom: 4px;
+		margin-bottom: 7px;
 		font-size: 12px;
 	}
 	footer span .bottom {
