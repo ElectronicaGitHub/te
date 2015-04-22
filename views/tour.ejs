@@ -5,9 +5,10 @@
 <link rel="stylesheet" href="/stylesheets/tour.css">
 <div ng-app="index" ng-controller="Tour" ng-init="init()" class="tour-container">
 	<div class="tour-bg" style="background-image : url(<%= tour.image %>)"></div>	
-	<div class="tour-content" ng-bind-html="trustAsHtml(tour.content)">
+	<div class="tour-content" >
+		<div ng-bind-html="trustAsHtml(tour.content)"></div>
+		<p>Данное предложение не является публичной афертой.</p>
 	</div>
-	<p>Данное предложение не является публичной афертой.</p>
 </div>
 
 <script>
