@@ -17,16 +17,20 @@ function fn(express) {
 		Themes.findOne({
 			userlabel : req.params.theme
 		}, function(err, result) {
-			Tour.find({
-				theme : result.userlabel
-			}, function(err, result2) {
-				console.log(result);
-				if (err) return next(err);
-				res.render('theme', {
-					theme : result,
-					tours : result2
+			if (result && result.userlabel) {
+				Tour.find({
+					theme : result.userlabel
+				}, function(err, result2) {
+					console.log(result);
+					if (err) return next(err);
+					res.render('theme', {
+						theme : result,
+						tours : result2
+					})
 				})
-			})
+			} else {
+				res.redirect('/')
+			}
 		})
 	})
 
@@ -39,10 +43,14 @@ function fn(express) {
 				theme : req.params.theme
 			}, function(err, result2) {
 				if (err) return next(err);
-				res.render('tour',  {
-					tour : result2,
-					theme : result1
-				})
+				if (result1 && result2) {
+					res.render('tour',  {
+						tour : result2,
+						theme : result1
+					})
+				} else {
+					res.redirect('/');
+				}
 			})
 		})
 	})
